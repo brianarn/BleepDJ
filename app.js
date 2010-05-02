@@ -11,10 +11,9 @@
  * See http://creativecommons.org/licenses/by/3.0/us/ for details
  */
  
- // Require our Dijit
- dojo.require('rtnet.BleepDJ');
- 
- // On DOM load, drop one in the page
- dojo.ready(function(){
-     
- }); // dojo.ready
+// Require some things
+dojo.require('rtnet.BleepDJ');
+
+// On DOM load, drop one in the page
+dojo.ready(function(){
+}); // dojo.ready
