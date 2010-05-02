@@ -1,8 +1,7 @@
 /* CSS specifically for the BleepDJ Dijit */
 
 .bleepdj_container {
-    width: 398px;
-    height: 398px;
+    display: inline-block;
     background-color: #C1C1C1;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -28,13 +27,17 @@
         rgb(153,153,153) 100%
     );
     position: relative;
+    padding-bottom: 10px;
 }
 
 .bleepdj_led_panel {
     width: 375px;
     height: 360px;
-    margin-left: 5px;
-    padding: 5px;
+    padding: 0px 10px;
+}
+
+.bleepdj_control_panel {
+    margin-left: 15px;
 }
 
 .bleepdj_led_col {
@@ -53,9 +56,28 @@
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    -webkit-transition-property: background-color, -webkit-box-shadow, border-color;
+    -webkit-transition-duration: 350ms;
 }
 
 .bleepdj_led.on {
     background-color: #FF5100;
     border: 3px outset #FF0000;
+    -webkit-box-shadow: 0px 0px 10px #FF9900;
+    -webkit-transition-duration: 100ms;
+}
+
+.bleepdj_control_play.dijitButton .dijitButtonNode {
+    width: 40px;
+    height: 40px;
+}
+
+.bleepdj_control_play.dijitButton .dijitButtonNode button {
+    width: 100%;
+    height: 100%;
+}
+
+.bleepdj_control_tempo {
+    width: 200px;
+    display: inline-block;
 }
