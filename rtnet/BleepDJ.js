@@ -18,7 +18,9 @@ dojo.provide('rtnet.BleepDJ');
 dojo.require('dijit._Widget');
 dojo.require('dijit._Templated');
 dojo.require('dijit.form.Button');
-dojo.require('dijit.form.Slider');
+dojo.require('dijit.form.HorizontalSlider');
+dojo.require('dijit.form.HorizontalRule');
+dojo.require('dijit.form.HorizontalRuleLabels');
 
 // Build 'er up
 dojo.declare(
