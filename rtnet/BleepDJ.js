@@ -23,6 +23,6 @@ dojo.declare(
     'rtnet.BleepDJ',
     [dijit._Widget, dijit._Templated],
     {
-        templatePath: dojo.moduleUrl('rtnet', 'templates/BleepDJ.html');
+        templatePath: dojo.moduleUrl('rtnet', 'templates/BleepDJ.html')
     }
-)
+); // declare('rtnet.BleepDJ')
