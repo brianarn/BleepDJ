@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="utf-8" /> 
+    <title>BleepDJ</title>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojo/resources/dojo.css"> 
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dijit/themes/tundra/tundra.css"> 
+    <link rel="stylesheet" type="text/css" href="BleepDJ.css"> 
+</head> 
+<body class="tundra"> 
+    <div id="wrapper"> 
+        <header> 
+            <h1>BleepDJ</h1> 
+        </header>
+        <section id="content"> 
+            <div dojoType="rtnet.BleepDJ"></div>
+        </section> 
+        <footer> 
+            <p>Copyright &copy; 2010 Brian Arnold, released under an <a href="LICENSE">MIT license</a>, so, do whatever you want with it.</p> 
+        </footer> 
+    </div> 
+    <!-- Scripts at the bottom --> 
+    <script> 
+    // Dojo Config -- MUST be before Dojo comes in
+    var djConfig = {
+        isDebug: true,
+        parseOnLoad: true,
+        baseUrl: './',
+        modulePaths: {
+            rtnet: 'rtnet'
+        }
+    };
+    </script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojo/dojo.xd.js"></script> 
+    <script src="BleepDJ.js"></script> 
+</body> 
+</html>
