@@ -1,1 +1,61 @@
 /* CSS specifically for the BleepDJ Dijit */
+
+.bleepdj_container {
+    width: 398px;
+    height: 398px;
+    background-color: #C1C1C1;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    border: 2px solid #909090;
+    -webkit-box-shadow: 2px 2px 1px #707070;
+    -moz-box-shadow: 2px 2px 1px #707070;
+    box-shadow: 2px 2px 1px #707070;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, rgb(153,153,153)),
+        color-stop(0.1, rgb(193,193,193)),
+        color-stop(0.9, rgb(193,193,193)),
+        color-stop(1, rgb(153,153,153))
+    );
+    background-image: -moz-linear-gradient(
+        center top,
+        rgb(153,153,153) 0%,
+        rgb(193,193,193) 10%,
+        rgb(193,193,193) 90%,
+        rgb(153,153,153) 100%
+    );
+    position: relative;
+}
+
+.bleepdj_led_panel {
+    width: 375px;
+    height: 360px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.bleepdj_led_col {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bleepdj_led {
+    width: 24px;
+    height: 24px;
+    border: 3px outset #BB0000;
+    margin: 13px 7px;
+    background-color: #780000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.bleepdj_led.on {
+    background-color: #FF5100;
+    border: 3px outset #FF0000;
+}

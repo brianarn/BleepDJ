@@ -23,6 +23,33 @@ dojo.declare(
     'rtnet.BleepDJ',
     [dijit._Widget, dijit._Templated],
     {
-        templatePath: dojo.moduleUrl('rtnet', 'templates/BleepDJ.html')
+        templatePath: dojo.moduleUrl('rtnet', 'templates/BleepDJ.html'),
+
+        // Local variables - the note array is intentionally defined here for all
+        notes: ['c2','d2','e2','f2','g2','a2','b2','c3'],
+        cols: null, // Will be a set of query objects for LEDs per column
+        curCol: 0,
+        numCols: 0,
+        curTempo: 120,
+        isPlaying: false,
+
+        postCreate: function() {
+            var ledCols, i, l;
+            
+            ledCols = dojo.query('.bleepdj_led_col');
+            this.cols = [];
+            this.numCols = ledCols.length;
+            for (i = 0, l = ledCols.length; i < l; i++) {
+                this.cols.push(dojo.query('.bleepdj_led', ledCols[i]));
+            }
+
+            /* Cycle the lights */
+            this.cols[this.curCol].addClass('on');
+            setInterval(dojo.hitch(this, function(){
+                this.cols[this.curCol].removeClass('on');
+                this.curCol = (this.curCol + 1) % this.numCols;
+                this.cols[this.curCol].addClass('on');
+            }), 1000 / this.curTempo * 60);
+        }
     }
 ); // declare('rtnet.BleepDJ')
