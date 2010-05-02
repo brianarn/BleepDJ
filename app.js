@@ -12,7 +12,7 @@
  */
  
  // Require our Dijit
- dojo.require('rtnet/BleepDJ');
+ dojo.require('rtnet.BleepDJ');
  
  // On DOM load, drop one in the page
  dojo.ready(function(){
